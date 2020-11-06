@@ -12,10 +12,10 @@
 		function getRandomStandard() {
 			var idx = Math.floor(Math.random() * n_standards);
 			title_field = document.getElementById("iso_title");
-			title_field.textContent = standards[idx];
+			title_field.textContent = standards[idx].replace(/\n/g, "\r\n");
 			
 			code_field = document.getElementById("iso_code");
-			code_field.textContent = codes[idx];
+			code_field.textContent = "📝 " + codes[idx];
 		}
 	</script>
 	<style>
@@ -34,11 +34,29 @@
 		}
 
 		#iso_title {
-			font-size: 2em;
+			font-size: 1.5em;
 			font-family: DejaVu Sans, Verdana, serif;
 			width: 80%;
 			margin: auto;
 			text-align: justify;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-bottom: solid 3px white;
+			padding: 1em;
+			text-align: center;
+			text-decoration: none;
+			transition: all 0.5s;
+			box-sizing: border-box;
+		}
+
+		button:hover {
+			background-color: #247127;
+			border-bottom: solid 3px black;
+			cursor: pointer;
 		}
 	</style>
 	</head>
