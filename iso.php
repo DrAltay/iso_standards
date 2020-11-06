@@ -18,11 +18,36 @@
 			code_field.textContent = codes[idx];
 		}
 	</script>
+	<style>
+		body {
+			margin: 0px;
+		}
+
+		article {
+			text-align: center;
+			margin: 1em;
+		}
+
+		#iso_code {
+			font-size: 3em;
+			font-family: DejaVu Sans, Verdana, serif;
+		}
+
+		#iso_title {
+			font-size: 2em;
+			font-family: DejaVu Sans, Verdana, serif;
+			width: 80%;
+			margin: auto;
+			text-align: justify;
+		}
+	</style>
 	</head>
 
 	<body>
-	<h1 id="iso_code"></h1>
-	<h2 id="iso_title"></h2>
-	<button onclick="getRandomStandard()">I <3 me some good standard, more!</button>
+		<article>
+		<button onclick="getRandomStandard()">I ❤️  me some good standard, more!</button>
+		<h1 id="iso_code"></h1>
+		<h2 id="iso_title"></h2>
+		</article>
 	</body>
 </html>
